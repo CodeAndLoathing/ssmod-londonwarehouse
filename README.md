@@ -5,7 +5,7 @@ Sunless Sea Mod : CNL London Warehouse
 
 About
 -----
-This Sunless Sea mod adds a purchasable warehouse to Fallen London to store items via the shop interface.
+This Sunless Sea mod adds a warehouse you can purchase to Fallen London which may be used to store items via the shop interface.
 
 This is an unofficial fan work. 
 
@@ -26,17 +26,20 @@ Then copy the images in inside SunlessSea/addon/cnl-warehouse/images to SunlessS
 Removal
 -------
 To remove this mod, just delete the cnl-warehouse folder from within the /addons folder.
-You will want to remove any stored items first unless you don't mind losing them.
+You will want to remove any items from storage first - unless you don't mind losing them.
 
 Usage
 -----
 The mod adds a new menu item in Fallen London : Wolfstack Docks
 
-From the Wolfstack Docks menu you can buy or sell your warehouse.
+From the Wolfstack Docks menu you can buy (or sell) your warehouse.
 
-You can also "activate" the warehouse - this will hide the regular shops and instead show your warehouse.
+You can also "activate" the warehouse - this hides the regular shops and instead shows your warehouse under the shops tab.
 
-You can re-activate the regular shops from the Wolfstack Docks menu (alternatively, leaving London and re-docking will also restore the regular shops).
+You can re-activate the regular shops from the Wolfstack Docks menu. (alternatively, leaving London and re-docking will also restore the regular shops).
+
+To actually store and unstore fuel for example, you would use the shop interface to sell 1 fuel for 1 "stored fuel", and buy 1 fuel at the cost of 1 "stored fuel".
+Your current stored inventory can be tracked in your Hold under Curiosities.
 
 
 Latest Version

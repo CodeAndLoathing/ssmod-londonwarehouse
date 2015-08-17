@@ -2,12 +2,12 @@
   {
     "Name": "A Warehouse by the Docks",
     "Image": "delirium",
-    "Description": "Move items between your ship and your warehouse. [To return to the regular shops visit the Wolfstack Docks menu and select: Enough with the loading and the unloading!]",
+    "Description": "[To return to the regular shops visit the Wolfstack Docks menu and select: Enough with the loading and the unloading!]",
     "Shops": [
       {
-        "Name": "Warehouse",
+        "Name": "Your Warehouse",
         "Image": "cnl_warehouse",
-        "Description": "Sometimes you need a place to stash some things for a while.",
+        "Description": "With a little creative packing, it's amazing what you can fit in here.",
         "Ordering": 0,
         "Exchange": null,
         "Availabilities": [
@@ -55,7 +55,7 @@
             "InShop": null,
             "PurchaseQuality": {
               "RelationshipCapable": false,
-              "OwnerName": "coadandloathing",
+              "OwnerName": "github.com/CodeAndLoathing",
               "Description": "Your warehouse has a coal bunker.",
               "Image": "fuel",
               "Notes": "Space in your warehouse for Fuel",
@@ -98,10 +98,10 @@
           }
         ],
         "UnlockCost": [ ],
-        "Id": 6200001
+        "Id": 6100201
       }
     ],
-    "SettingIds": [ 6100201 ],
+    "SettingIds": [ 6100000 ],
     "Id": 6100200
   }
 ]
