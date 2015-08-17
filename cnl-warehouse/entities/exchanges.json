@@ -2,7 +2,7 @@
   {
     "Name": "A Warehouse by the Docks",
     "Image": "delirium",
-    "Description": "[To return to the regular shops visit the Wolfstack Docks menu and select: Enough with the loading and the unloading!]",
+    "Description": "To view the regular shops, open the Wolfstack Docks menu and select: Enough with the loading and the unloading!",
     "Shops": [
       {
         "Name": "Your Warehouse",
