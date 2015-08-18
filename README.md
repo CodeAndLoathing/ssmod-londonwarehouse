@@ -1,16 +1,11 @@
 # ssmod-londonwarehouse
 
-Sunless Sea Mod : CNL London Warehouse
-======================================
+SunlessSea Mod : CNL London Warehouse
+=====================================
 
-About
------
 This Sunless Sea mod adds a warehouse you can purchase to Fallen London which may be used to store items via the shop interface.
 
-This is an unofficial fan work. 
-
-Fallen London and Sunless Sea are © 2015 and ™ Failbetter Games Limited: www.failbettergames.com
-
+This is an unofficial fan work. Fallen London and Sunless Sea are © 2015 and ™ Failbetter Games Limited: www.failbettergames.com
 The artwork included with this mod is from Sunless Sea and should only be used with a licensed copy of Sunless Sea.
 
 Installation
@@ -45,3 +40,11 @@ Your current stored inventory can be tracked in your Hold under Curiosities.
 Latest Version
 --------------
 For the latest version see [https://github.com/CodeAndLoathing/ssmod-londonwarehouse/releases]
+
+
+JSON IDs
+--------
+Setting    6100000 ....... display warehouse exchange
+Qualities  6100001 6100199
+Exchanges  6100200 6100219
+Events     6100220 6100299
