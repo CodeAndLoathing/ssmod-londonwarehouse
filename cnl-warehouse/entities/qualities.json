@@ -75,7 +75,7 @@
     "Name": "Stored Coal (London)",
     "Id": 6100002
   },
-    {
+  {
     "RelationshipCapable": false,
     "OwnerName": "github.com/CodeAndLoathing",
     "Description": "",
@@ -112,5 +112,43 @@
     "LevelImageText": null,
     "Name": "Stored Supplies (London)",
     "Id": 6100003
+  },
+  {
+    "RelationshipCapable": false,
+    "OwnerName": "github.com/CodeAndLoathing",
+    "Description": "",
+    "Image": "parabolalinen",
+    "Notes": "converts to 102019",
+    "Tag": "Rewards",
+    "Cap": null,
+    "HimbleLevel": 0,
+    "UsePyramidNumbers": false,
+    "PyramidNumberIncreaseLimit": 50,
+    "AvailableAt": "",
+    "PreventNaming": false,
+    "CssClasses": null,
+    "World": null,
+    "Ordering": 100,
+    "IsSlot": false,
+    "LimitedToArea": null,
+    "AssignToSlot": null,
+    "Persistent": false,
+    "QualitiesWhichAllowSecondChanceOnThis": [ ],
+    "Visible": true,
+    "Enhancements": [ ],
+    "EnhancementsDescription": null,
+    "AllowsSecondChancesOnChallengesForQuality": null,
+    "GivesTrophy": null,
+    "UseEvent": null,
+    "DifficultyTestType": "Broad",
+    "DifficultyScaler": 60,
+    "AllowedOn": "Character",
+    "Nature": "Thing",
+    "Category": "Curiosity",
+    "LevelDescriptionText": null,
+    "ChangeDescriptionText": null,
+    "LevelImageText": null,
+    "Name": "Stored Bale of Parabola-Linen (London)",
+    "Id": 6100004
   }
 ]
