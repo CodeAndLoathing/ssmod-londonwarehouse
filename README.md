@@ -10,6 +10,8 @@ The artwork included with this mod is from Sunless Sea and should only be used w
 
 Installation
 ------------
+MAKE A BACKUP OF YOUR SAVE FILE BEFORE YOU CONTINUE.
+
 Extract the contents of the zip file and copy the cnl-warehouse folder to your addons folder.
 It should end up looking like SunlessSea/addon/cnl-warehouse/entities etc. 
 
@@ -20,8 +22,10 @@ Then copy the images in inside SunlessSea/addon/cnl-warehouse/images to SunlessS
 
 Removal
 -------
-To remove this mod, just delete the cnl-warehouse folder from within the /addons folder.
-You will want to remove any items from storage first - unless you don't mind losing them.
+FIRST SELL THE WAREHOUSE BEFORE YOU CONTINUE - THIS SHOULD CLEAN UP ANY PROPERTIES IN YOUR SAVE FILE ADDED FOR THE MOD.
+
+Then just delete the cnl-warehouse folder from within the /addons folder.
+If you do not sell the warehouse first, bad things can happen (tm). And by that I mean you may have to delete qualities by hand out of your save file.
 
 Usage
 -----
