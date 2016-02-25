@@ -50,7 +50,9 @@ For the latest version see [https://github.com/jephub/ssmod-londonwarehouse/rele
 
 JSON IDs
 --------
-Setting    6100000 ....... display warehouse exchange
-Qualities  6 + original ID (theoretical possibility for overlap but in practice none do)
-Exchanges  6100200 6100219
-Events     6100220 6100299
+| Category | ID |
+| --- | --- |
+| Warehouse | 6100000 (display warehouse exchange) |
+| Qualities  | 6 + original ID (theoretical possibility for overlap but in practice none do)<br/> |
+| Exchanges  | 6100200 - 6100219 |
+| Events     | 6100220 - 6100299 |
