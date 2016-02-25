@@ -12,6 +12,8 @@ Installation
 ------------
 MAKE A BACKUP OF YOUR SAVE FILE BEFORE YOU CONTINUE.
 
+If you have the initial release of the warehouse mod, take all your goods out of the warehouse, then sell your warehouse, then save before installing the mod.
+
 Extract the contents of the zip file and copy the cnl-warehouse folder to your addons folder.
 It should end up looking like SunlessSea/addon/cnl-warehouse/entities etc. 
 
@@ -43,12 +45,12 @@ Your current stored inventory can be tracked in your Hold under Curiosities.
 
 Latest Version
 --------------
-For the latest version see [https://github.com/CodeAndLoathing/ssmod-londonwarehouse/releases]
+For the latest version see [https://github.com/jephub/ssmod-londonwarehouse/releases]
 
 
 JSON IDs
 --------
 Setting    6100000 ....... display warehouse exchange
-Qualities  6100001 6100199
+Qualities  6 + original ID (theoretical possibility for overlap but in practice none do)
 Exchanges  6100200 6100219
 Events     6100220 6100299
