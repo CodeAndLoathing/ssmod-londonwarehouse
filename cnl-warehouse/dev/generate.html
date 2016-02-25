@@ -1,0 +1,286 @@
+<html>
+<body>
+
+<form id="jsonFile" name="jsonFile" enctype="multipart/form-data" method="post">
+
+  <fieldset>
+    <h2>Load installed qualities file file</h2>
+     <input type='file' id='fileinput'>
+     <input type='button' id='btnLoad' value='Load' onclick='loadFile();'>
+  </fieldset>
+</form>
+
+
+<script type="text/javascript">
+
+  function loadFile() {
+    var input, file, fr;
+
+    if (typeof window.FileReader !== 'function') {
+      alert("The file API isn't supported on this browser yet.");
+      return;
+    }
+
+    input = document.getElementById('fileinput');
+    if (!input) {
+      alert("Um, couldn't find the fileinput element.");
+    }
+    else if (!input.files) {
+      alert("This browser doesn't seem to support the `files` property of file inputs.");
+    }
+    else if (!input.files[0]) {
+      alert("Please select a file before clicking 'Load'");
+    }
+    else {
+      file = input.files[0];
+      fr = new FileReader();
+      fr.onload = receivedText;
+      fr.readAsText(file);
+    }
+  }
+  
+  function receivedText(e) {
+    var lines = e.target.result;
+    var l = JSON.parse(lines); 
+  
+    var allowedTags = ["Colours",
+      "Contraband",
+      "EQUIPMENT - AUXILIARY",
+      "Equipment - Aft",
+      "Equipment - Auxiliary",
+      "Equipment - Bridge",
+      "Equipment - Deck",
+      "Equipment - Engines",
+      "Equipment - Forward",
+      "Goods",
+      "Resources",
+      "Rewards",
+      "Ship Conditions",
+      "goods"];
+    
+    var q = [
+      {
+          "RelationshipCapable" : false,
+          "OwnerName" : "github.com/CodeAndLoathing",
+          "Description" : "Do you have space to store your material things?",
+          "Image" : "cnl_warehouse",
+          "Notes" : null,
+          "Tag" : "Character",
+          "Cap" : null,
+          "HimbleLevel" : 0,
+          "UsePyramidNumbers" : false,
+          "PyramidNumberIncreaseLimit" : 50,
+          "AvailableAt" : null,
+          "PreventNaming" : false,
+          "CssClasses" : null,
+          "World" : null,
+          "Ordering" : 0,
+          "IsSlot" : false,
+          "LimitedToArea" : null,
+          "AssignToSlot" : null,
+          "Persistent" : true,
+          "QualitiesWhichAllowSecondChanceOnThis" : [],
+          "Visible" : true,
+          "Enhancements" : [],
+          "EnhancementsDescription" : null,
+          "AllowsSecondChancesOnChallengesForQuality" : null,
+          "GivesTrophy" : null,
+          "UseEvent" : null,
+          "DifficultyTestType" : "Broad",
+          "DifficultyScaler" : 60,
+          "AllowedOn" : "Character",
+          "Nature" : "Status",
+          "Category" : "Circumstance",
+          "LevelDescriptionText" : "1|A small warehouse in London",
+          "ChangeDescriptionText" : "1|You have a small warehouse in London, down by the docks.",
+          "LevelImageText" : null,
+          "Name" : "Memoirs: A person of property",
+          "Id" : 6100001
+        }    
+    ];
+    var e = [];
+    
+    for (var i = 0; i < l.length; i++) {
+      if (l[i].Category === "Goods" && allowedTags.indexOf(l[i].Tag) !== -1) {
+        var nq = {
+          "RelationshipCapable" : false,
+          "OwnerName" : "github.com/CodeAndLoathing",
+          "Description" : l[i].Description,
+          "Image" : l[i].Image,
+          "Notes" : "converts to " + l[i].Id,
+          "Tag" : "Rewards",
+          "Cap" : null,
+          "HimbleLevel" : 0,
+          "UsePyramidNumbers" : false,
+          "PyramidNumberIncreaseLimit" : 50,
+          "AvailableAt" : "",
+          "PreventNaming" : false,
+          "CssClasses" : null,
+          "World" : null,
+          "Ordering" : 100,
+          "IsSlot" : false,
+          "LimitedToArea" : null,
+          "AssignToSlot" : null,
+          "Persistent" : false,
+          "QualitiesWhichAllowSecondChanceOnThis" : [],
+          "Visible" : true,
+          "Enhancements" : [],
+          "EnhancementsDescription" : null,
+          "AllowsSecondChancesOnChallengesForQuality" : null,
+          "GivesTrophy" : null,
+          "UseEvent" : null,
+          "DifficultyTestType" : "Broad",
+          "DifficultyScaler" : 60,
+          "AllowedOn" : "Character",
+          "Nature" : "Thing",
+          "Category" : "Curiosity",
+          "LevelDescriptionText" : null,
+          "ChangeDescriptionText" : null,
+          "LevelImageText" : null,
+          "Name" : "Stored " + l[i].Name + " (London)",
+          "Id" : l[i].Id + 6100000
+        };
+        q.push(nq);
+        
+        var ne = 
+          {
+            "Quality" : {
+							"RelationshipCapable" : false,
+							"OwnerName" : "",
+							"Description" : "",
+							"Image" : null,
+							"Notes" : null,
+							"Tag" : null,
+							"Cap" : null,
+							"HimbleLevel" : 0,
+							"UsePyramidNumbers" : false,
+							"PyramidNumberIncreaseLimit" : 50,
+							"AvailableAt" : null,
+							"PreventNaming" : false,
+							"CssClasses" : null,
+							"World" : null,
+							"Ordering" : 0,
+							"IsSlot" : false,
+							"LimitedToArea" : null,
+							"AssignToSlot" : null,
+							"Persistent" : false,
+							"QualitiesWhichAllowSecondChanceOnThis" : [],
+							"Visible" : true,
+							"Enhancements" : [],
+							"EnhancementsDescription" : null,
+							"AllowsSecondChancesOnChallengesForQuality" : null,
+							"GivesTrophy" : null,
+							"UseEvent" : null,
+							"DifficultyTestType" : "Broad",
+							"DifficultyScaler" : 60,
+							"AllowedOn" : "Unspecified",
+							"Nature" : "Unspecified",
+							"Category" : "Unspecified",
+							"LevelDescriptionText" : null,
+							"ChangeDescriptionText" : null,
+							"LevelImageText" : null,
+							"Name" : "",
+							"Id" : l[i].Id
+						},
+            "Cost" : 1,
+            "SellPrice" : 1,
+            "InShop" : null,
+            "PurchaseQuality" : {
+							"RelationshipCapable" : false,
+							"OwnerName" : "",
+							"Description" : "",
+							"Image" : null,
+							"Notes" : null,
+							"Tag" : null,
+							"Cap" : null,
+							"HimbleLevel" : 0,
+							"UsePyramidNumbers" : false,
+							"PyramidNumberIncreaseLimit" : 50,
+							"AvailableAt" : null,
+							"PreventNaming" : false,
+							"CssClasses" : null,
+							"World" : null,
+							"Ordering" : 0,
+							"IsSlot" : false,
+							"LimitedToArea" : null,
+							"AssignToSlot" : null,
+							"Persistent" : false,
+							"QualitiesWhichAllowSecondChanceOnThis" : [],
+							"Visible" : true,
+							"Enhancements" : [],
+							"EnhancementsDescription" : null,
+							"AllowsSecondChancesOnChallengesForQuality" : null,
+							"GivesTrophy" : null,
+							"UseEvent" : null,
+							"DifficultyTestType" : "Broad",
+							"DifficultyScaler" : 60,
+							"AllowedOn" : "Unspecified",
+							"Nature" : "Unspecified",
+							"Category" : "Unspecified",
+							"LevelDescriptionText" : null,
+							"ChangeDescriptionText" : null,
+							"LevelImageText" : null,
+							"Name" : "",
+							"Id" : nq.Id
+						},
+            "BuyMessage" : null,
+            "SellMessage" : null,
+            "SaleDescription" : "Move items between your ship and your warehouse",
+            "Id" : 6200002
+          }
+        e.push(ne);
+      }
+    }
+
+    var exchanges = 
+      [{
+          "Name" : "A Warehouse by the Docks",
+          "Image" : "delirium",
+          "Description" : "To view the regular shops, open the Wolfstack Docks menu and select: Enough with the loading and the unloading!",
+          "Shops" : [{
+              "Name" : "Your Warehouse",
+              "Image" : "cnl_warehouse",
+              "Description" : "With a little creative packing, it's amazing what you can fit in here.",
+              "Ordering" : 0,
+              "Exchange" : null,
+              "Availabilities" : e,
+              "UnlockCost" : [],
+              "Id" : 6100201
+            }
+          ],
+          "SettingIds" : [6100000],
+          "Id" : 6100200
+        }
+      ];
+
+    makeTextFile("Qualities", JSON.stringify(q));
+    makeTextFile("Exchanges", JSON.stringify(exchanges));
+  }
+  
+  function makeTextFile(label, text) {
+    var data = new Blob([text], {type: 'text/plain'});
+
+    // If we are replacing a previously generated file we need to
+    // manually revoke the object URL to avoid memory leaks.
+    //if (textFile !== null) {
+    //  window.URL.revokeObjectURL(textFile);
+    //}
+
+    var textFile = window.URL.createObjectURL(data);
+
+    //var a = document.createChild(a)
+    //document.getElementById('out').appendChild
+    // returns a URL you can use as a href
+    
+    var link = document.createElement('a');
+    link.href = textFile;
+    link.appendChild(document.createTextNode(label));
+    link.style.display = 'block';
+    document.body.appendChild(link);
+    
+    return textFile;
+  }
+</script>
+
+</body>
+</html>
