@@ -45,7 +45,7 @@ Your current stored inventory can be tracked in your Hold under Curiosities.
 
 Latest Version
 --------------
-For the latest version see [https://github.com/jephub/ssmod-londonwarehouse/releases]
+For the latest version see [https://github.com/CodeAndLoathing/ssmod-londonwarehouse/releases]
 
 
 JSON IDs
